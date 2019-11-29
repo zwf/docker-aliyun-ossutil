@@ -1,12 +1,16 @@
 # docker-aliyun-ossutil
 ossutil docker image base on busybox
 
-## add alias to env
+## how to config as a native binary version
 
-```bash
-alias ossutil='docker run --rm -ti
-               -v $(your ossutilconfig file path):/root/.ossutilconfig 
-               -v $(pwd):/oss
-               zhangweifang/docker-aliyun-ossutil ossutil'
-```
+1. pull image from hub.docker.com
 
+   ```bash
+   docker pull zhangweifang/aliyun-ossutil
+   ```
+
+2. add alias to env
+
+   ```bash
+   alias ossutil='docker run --rm -ti -v $(your ossutilconfig file path):/root/.ossutilconfig -v $(pwd):/oss zhangweifang/aliyun-ossutil ossutil'
+   ```
